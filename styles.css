@@ -56,6 +56,11 @@ body {
     display: inline;
 }
 
+.drawer:hover ~ .navbar,
+.drawer:hover ~ .content {
+    margin-left: calc(var(--drawer-width) - 5rem);
+}
+
 .menuItem{
     color: var(--text-secondary);
     display: flex;
@@ -79,6 +84,10 @@ body {
     width: calc(20px + 0.5vw);
 }
 
+.drawer > div:nth-child(8) {
+    padding-top: 60px;
+}
+
 .dashboard {
     font-size: clamp(12px, calc(25px + 0.9vw), 50px);
 }
@@ -93,12 +102,62 @@ body {
     padding-top: 10px;
 }
 
+/* Navbar Styling */
 .navbar {
     grid-area: nav;
+    transition: var(--transition-notDrawer);
+    background-color: var(--nav-bg-1);
+    padding: 1.5rem 3rem;
+    border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+.topNav {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+}
+
+.search > input {
+    display: inline-block;
+    border: 0;
+    background-color: var(--nav-color-1);
+    padding: 0.5rem 1.5rem;
+    outline-color: var(--blue-1);
+    margin-left: 1.25rem;
+    border-radius: 5px;
+    width: min(80%, 600px);
+    margin-right: 20px;
+}
+
+.navbar .account {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.gh-avatar {
+    background: var(--gh-avatar) center center / cover no-repeat;
+    border: 50%;
+}
+
+.account .gh-avatar {
+    margin: 0 1rem 0 2.5rem;
+    height: 40px;
+    width: 40px;
 }
 
 .content {
     grid-area: content;
+    transition: var(--transition-notDrawer);
 }
 
 img {
