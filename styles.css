@@ -216,7 +216,7 @@ img {
     grid-template-columns: 1fr auto;
     grid-template-rows: min-content 1fr;
     gap: 2rem;
-    grid-template-areas:
+    grid-template-areas: 
         "projects announcements"
         "projects trending";
     overflow: auto;
@@ -227,4 +227,22 @@ img {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.8rem;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+/* .projects parent class selector didn't work, changed to main-projects id selector */
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: 100%;
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.projects .card {
+    background-color: var(--nav-color-2);  
 }
