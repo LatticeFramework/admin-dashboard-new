@@ -233,10 +233,10 @@ img {
     grid-area: projects;
 }
 
-/* .projects parent class selector didn't work, changed to main-projects id selector */
+/* Don't forget comma after 300px */
 .projects .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px 1fr));
     height: 100%;
     grid-auto-rows: 250px;
     gap: 2rem;
@@ -244,5 +244,48 @@ img {
 }
 
 .projects .card {
-    background-color: var(--nav-color-2);  
+    background-color: var(--nav-color-2);
+    border-left: 10px solid rgb(255, 197, 91);
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.projects .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.projects .icons {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.4rem;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.card {
+    background-color: rgba(45, 187, 187, 0.459);
+    padding: 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    max-width: 30vw;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.announcement {
+    
 }
