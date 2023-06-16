@@ -1,3 +1,9 @@
+/* .books {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 400px;
+} */
+
 .book {
     position: relative;
     z-index: 0;
