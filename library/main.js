@@ -118,6 +118,12 @@ function createReadElement(bookItem, book) {
     return read;
 }
 
+// Try to make favourites function here
+
+// function createFavouritesElement()
+
+// End test function here
+
 function fillOutEditForm(book) {
     modal.style.display = 'block'
     document.querySelector('.form-title').textContent = 'Edit Book'

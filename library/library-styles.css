@@ -56,12 +56,12 @@
     margin-right: 5px;
   }
   .card {
-    border-left: 10px solid rgb(180, 1, 1) !important;
+    border-left: 15px solid rgb(233, 69, 69) !important;
     max-width: 300px;
-    background-color: rgba(34, 211, 238, 0.3) !important;
+    background-color: rgba(159, 159, 207, 0.3) !important;
   }
   .read-checked {
-    border-left: 10px solid rgb(18, 157, 0) !important;
+    border-left: 15px solid rgb(18, 157, 0) !important;
   }
   .edit-icon {
     width: 25px;
@@ -208,5 +208,12 @@
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+  }
+
+  .h3-header {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   
